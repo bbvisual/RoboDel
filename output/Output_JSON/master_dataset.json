@@ -318,6 +318,30 @@
             "base_scene_name": "Trial_3_FP201_Table",
             "session_id": "session_1790150954",
             "saved_image_path": "output/Output_Images/session_1790150954_Trial_3_FP201_Table.jpg"
+        },
+        {
+            "removed_objects": [
+                {
+                    "object_id": "Bread|-00.52|+01.17|-00.03",
+                    "label": "Bread",
+                    "bounding_box": {
+                        "x": 467,
+                        "y": 415,
+                        "width": 112,
+                        "height": 72
+                    },
+                    "click_position": {
+                        "x": 535,
+                        "y": 432
+                    }
+                }
+            ],
+            "removed_labels": [
+                "bread"
+            ],
+            "base_scene_name": "Trial_1_FP1_Island",
+            "session_id": "session_1790151550",
+            "saved_image_path": "output/Output_Images/session_1790151550_Trial_1_FP1_Island.jpg"
         }
     ]
 }
