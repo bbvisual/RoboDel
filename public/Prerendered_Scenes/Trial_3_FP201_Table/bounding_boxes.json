@@ -1,0 +1,47 @@
+[
+    {
+        "id": "CreditCard|-01.94|+00.68|+01.80",
+        "label": "CreditCard",
+        "x": 414,
+        "y": 396,
+        "width": 23,
+        "height": 16,
+        "isClicked": false
+    },
+    {
+        "id": "Laptop|-01.70|+00.68|+01.66",
+        "label": "Laptop",
+        "x": 302,
+        "y": 291,
+        "width": 125,
+        "height": 125,
+        "isClicked": false
+    },
+    {
+        "id": "Newspaper|-02.76|+00.68|+01.18",
+        "label": "Newspaper",
+        "x": 582,
+        "y": 297,
+        "width": 44,
+        "height": 21,
+        "isClicked": false
+    },
+    {
+        "id": "Plate|-02.40|+00.68|+01.68",
+        "label": "Plate",
+        "x": 524,
+        "y": 357,
+        "width": 52,
+        "height": 39,
+        "isClicked": false
+    },
+    {
+        "id": "Statue|-01.76|+00.73|-00.13",
+        "label": "Statue",
+        "x": 445,
+        "y": 187,
+        "width": 26,
+        "height": 41,
+        "isClicked": false
+    }
+]

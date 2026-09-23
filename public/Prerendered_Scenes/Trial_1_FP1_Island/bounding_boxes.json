@@ -1,0 +1,47 @@
+[
+    {
+        "id": "Apple|-00.47|+01.15|+00.48",
+        "label": "Apple",
+        "x": 316,
+        "y": 421,
+        "width": 40,
+        "height": 44,
+        "isClicked": false
+    },
+    {
+        "id": "Book|+00.15|+01.10|+00.62",
+        "label": "Book",
+        "x": 336,
+        "y": 359,
+        "width": 101,
+        "height": 47,
+        "isClicked": false
+    },
+    {
+        "id": "Bowl|+00.27|+01.10|-00.75",
+        "label": "Bowl",
+        "x": 635,
+        "y": 357,
+        "width": 39,
+        "height": 23,
+        "isClicked": false
+    },
+    {
+        "id": "Bread|-00.52|+01.17|-00.03",
+        "label": "Bread",
+        "x": 467,
+        "y": 415,
+        "width": 112,
+        "height": 72,
+        "isClicked": false
+    },
+    {
+        "id": "Tomato|-00.39|+01.14|-00.81",
+        "label": "Tomato",
+        "x": 758,
+        "y": 418,
+        "width": 49,
+        "height": 34,
+        "isClicked": false
+    }
+]

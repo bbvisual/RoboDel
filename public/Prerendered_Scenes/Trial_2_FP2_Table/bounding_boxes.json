@@ -1,0 +1,47 @@
+[
+    {
+        "id": "Bowl|+00.28|+00.92|+01.09",
+        "label": "Bowl",
+        "x": 332,
+        "y": 263,
+        "width": 59,
+        "height": 44,
+        "isClicked": false
+    },
+    {
+        "id": "Bread|+00.26|+00.99|-00.08",
+        "label": "Bread",
+        "x": 620,
+        "y": 272,
+        "width": 66,
+        "height": 44,
+        "isClicked": false
+    },
+    {
+        "id": "CellPhone|-00.31|+00.92|+01.29",
+        "label": "CellPhone",
+        "x": 143,
+        "y": 406,
+        "width": 95,
+        "height": 47,
+        "isClicked": false
+    },
+    {
+        "id": "Egg|+00.13|+00.95|-00.17",
+        "label": "Egg",
+        "x": 677,
+        "y": 301,
+        "width": 28,
+        "height": 25,
+        "isClicked": false
+    },
+    {
+        "id": "Tomato|+00.17|+00.97|-00.28",
+        "label": "Tomato",
+        "x": 695,
+        "y": 285,
+        "width": 44,
+        "height": 35,
+        "isClicked": false
+    }
+]
