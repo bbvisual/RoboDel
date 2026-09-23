@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 // Using your remote server's IP
- const API_URL = 'http://127.0.0.1:8000';;
+ const API_URL = 'http://127.0.0.1:8000';
 
 const PHASES = {
   FIXATION: -1,
@@ -18,7 +18,8 @@ const OBSERVATION_DURATION_SECONDS = 10;
 
 const TRIAL_SEQUENCE = [
   "Trial_1_FP1_Island",
-  "Trial_2_FP2_Table"
+  "Trial_2_FP2_Table",
+  "Trial_3_FP201_Table",
 ];
 
 function App() {
@@ -63,8 +64,7 @@ function App() {
       .catch(error => console.error("Failed to load local bounding boxes:", error));
 
     // 2. Set Local Base Image (strictly for Left Panel)
-    // Change this from base.png to base.jpg
-  const initialImageUrl = `${basePath}/base.jpg`;
+    const initialImageUrl = `${basePath}/base.jpg`;
     setLiveBaseImage(initialImageUrl);
 
     const ref = new Image();
@@ -82,13 +82,13 @@ function App() {
       })
       .catch(error => {
         console.error("Backend connection failed. Port 8000 might be blocked:", error);
-        // Leave isProcessing true so it stays on the loading screen if blocked
       });
 
   }, [activeFolder, currentTrialIndex]);
 
   useEffect(() => {
-    if (phase === PHASES.FIXATION && !isProcessing) {
+    // Let fixation countdown run immediately, even if backend is still spinning up
+    if (phase === PHASES.FIXATION) {
       if (fixationTimeLeft > 0) {
         const timerId = setTimeout(() => setFixationTimeLeft(fixationTimeLeft - 1), 1000);
         return () => clearTimeout(timerId);
@@ -96,7 +96,7 @@ function App() {
         setPhase(PHASES.OBSERVATION);
       }
     }
-  }, [fixationTimeLeft, phase, isProcessing]);
+  }, [fixationTimeLeft, phase]);
 
   useEffect(() => {
     if (phase === PHASES.OBSERVATION) {
@@ -231,7 +231,6 @@ function App() {
       {phase === PHASES.FIXATION && (
         <div className="fixation-screen">
           <div className="fixation-cross" />
-          {isProcessing && <p style={{marginTop: '20px', color: '#666'}}>Connecting to Live Backend...</p>}
         </div>
       )}
 
@@ -263,7 +262,7 @@ function App() {
 
           <div className="interactive-windows-grid">
             <div className="interactive-card">
-              <div className="interactive-card-title">Base Scene (Click objects to remove them)</div>
+              <div className="interactive-card-title">Click on objects you remember not being in the prior scene to remove them</div>
               <div className="interactive-viewport-wrapper">
                 <div style={{ position: 'relative', display: 'inline-block', lineHeight: 0, maxHeight: '100%', maxWidth: '100%' }}>
                   <img

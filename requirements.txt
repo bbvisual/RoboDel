@@ -1,0 +1,16 @@
+# pip install -r requirements.txt
+#
+# Headless GPU rendering also needs the `vulkaninfo` binary on PATH, which is
+# not a pip package. Without sudo:
+#     conda install -c conda-forge vulkan-tools
+# With sudo:
+#     sudo apt install vulkan-tools
+ai2thor>=5.0.0
+opencv-python-headless   # optional; only speeds up the QA mask dilation
+flask                    # only needed for webapp/server.py
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.5
+pillow==9.5.0
+numpy==2.2.6
+requests==2.34.2

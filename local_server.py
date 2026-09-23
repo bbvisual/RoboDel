@@ -24,24 +24,33 @@ thor_lock = threading.Lock()
 TRIAL_CONFIGS = {
     "Trial_1_FP1_Island": {
         "scene": "FloorPlan1",
-        "teleport": dict(x=-1.2, y=0.9019, z=-0.5, rotation=dict(x=0, y=90, z=0), horizon=25, standing=True)
+        "teleport": dict(x=-1.25, y=0.901, z=0, rotation=dict(x=0, y=90, z=0), horizon=0, standing=True)
     },
     "Trial_2_FP2_Table": {
         "scene": "FloorPlan2",
         "teleport": dict(x=-0.75, y=0.901, z=0.5, rotation=dict(x=0, y=90, z=0), horizon=30, standing=True)
+    },
+    "Trial_3_FP201_Table": {
+        "scene": "FloorPlan201",
+        "teleport": dict(x=-2.25, y=0.9027, z=2.5, rotation=dict(x=0, y=180, z=0), horizon=30, standing=True)
     }
+
 }
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global renderer_instance, r
-    print("Initializing ThorRenderer for real-time server...")
-    renderer_instance = ThorRenderer(width=1024, height=576, gpu_device=1, quality="Medium")
+    print("Initializing ThorRenderer for CPU-only execution...")
+    renderer_instance = ThorRenderer(
+        width=1024, 
+        height=576, 
+        gpu_device=0, 
+        quality="High"
+    )
     r = renderer_instance.__enter__()
     yield
     if renderer_instance:
         renderer_instance.__exit__(None, None, None)
-
 app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
@@ -115,7 +124,7 @@ class SessionData(BaseModel):
     removed_objects: list
     removed_labels: list
     base_scene_name: str
-    final_image_path: str
+    # final_image_path removed completely
 
 OUTPUT_DIR = "output"
 JSON_DIR = os.path.join(OUTPUT_DIR, "Output_JSON")
@@ -155,7 +164,8 @@ def save_session(data: SessionData):
             print(f"Warning: Could not save live image: {e}")
             dest_img_path = "Image extraction failed"
 
-        session_record = data.dict()
+        # Use model_dump() for Pydantic v2 and record clean path
+        session_record = data.model_dump()
         session_record["session_id"] = session_id
         session_record["saved_image_path"] = dest_img_path
         
