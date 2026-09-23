@@ -49,4 +49,6 @@ public/Prerendered_Scenes/*
 !public/Prerendered_Scenes/.gitkeep
 
 public/output/Output_Images/*
+!public/output/Output_Images/.gitkeep
 public/output/Output_JSON/*
+!public/output/Output_JSON/.gitkeep
