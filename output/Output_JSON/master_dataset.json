@@ -342,6 +342,78 @@
             "base_scene_name": "Trial_1_FP1_Island",
             "session_id": "session_1790151550",
             "saved_image_path": "output/Output_Images/session_1790151550_Trial_1_FP1_Island.jpg"
+        },
+        {
+            "removed_objects": [],
+            "removed_labels": [
+                "bread",
+                "tomato"
+            ],
+            "base_scene_name": "Trial_1_FP1_Island",
+            "session_id": "session_1790151964",
+            "saved_image_path": "output/Output_Images/session_1790151964_Trial_1_FP1_Island.jpg"
+        },
+        {
+            "removed_objects": [
+                {
+                    "object_id": "Bread|-00.52|+01.17|-00.03",
+                    "label": "Bread",
+                    "bounding_box": {
+                        "x": 467,
+                        "y": 415,
+                        "width": 112,
+                        "height": 72
+                    },
+                    "click_position": {
+                        "x": 515,
+                        "y": 445
+                    }
+                },
+                {
+                    "object_id": "Tomato|-00.39|+01.14|-00.81",
+                    "label": "Tomato",
+                    "bounding_box": {
+                        "x": 758,
+                        "y": 418,
+                        "width": 49,
+                        "height": 34
+                    },
+                    "click_position": {
+                        "x": 784,
+                        "y": 430
+                    }
+                },
+                {
+                    "object_id": "Book|+00.15|+01.10|+00.62",
+                    "label": "Book",
+                    "bounding_box": {
+                        "x": 336,
+                        "y": 359,
+                        "width": 101,
+                        "height": 47
+                    },
+                    "click_position": {
+                        "x": 368,
+                        "y": 375
+                    }
+                }
+            ],
+            "removed_labels": [
+                "bread",
+                "tomato",
+                "tomato",
+                "book"
+            ],
+            "base_scene_name": "Trial_1_FP1_Island",
+            "session_id": "session_1790212683",
+            "saved_image_path": "output/Output_Images/session_1790212683_Trial_1_FP1_Island.jpg"
+        },
+        {
+            "removed_objects": [],
+            "removed_labels": [],
+            "base_scene_name": "Trial_1_FP1_Island",
+            "session_id": "session_1790212887",
+            "saved_image_path": "output/Output_Images/session_1790212887_Trial_1_FP1_Island.jpg"
         }
     ]
 }
