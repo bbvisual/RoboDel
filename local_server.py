@@ -18,11 +18,13 @@ app.add_middleware(
 )
 
 class SessionData(BaseModel):
+    participant_id: str      # Added to receive the ID from the Setup Phase
+    target_object: str       # Added to receive the specific trial target
     removed_objects: list
     removed_labels: list
     base_scene_name: str
     final_image_path: str
-    mouse_telemetry: dict  # Added for formatted SALICON telemetry payload
+    mouse_telemetry: dict  
 
 # 1. Use absolute paths based on this file's location so it works from any terminal context
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
