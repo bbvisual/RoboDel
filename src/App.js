@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://multitude-resupply-apply.ngrok-free.dev";
 const PHASES = {
   ID_ENTRY: -4,      // Phase 1: Ask for Participant ID (only on first trial)
   TARGET_PROMPT: -3, // Phase 2: Show the target object to find
